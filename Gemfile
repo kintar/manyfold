@@ -41,7 +41,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "rspec-rails"
-  gem "standard", "~> 1.42.1"
+  gem "standard", "~> 1.43.0"
   gem "factory_bot"
   gem "faker", "~> 3.5"
   gem "guard", "~> 2.19"
@@ -139,14 +139,15 @@ gem "climate_control", "~> 1.2", group: :test
 gem "sys-filesystem", "~> 1.5"
 gem "shrine", "~> 3.6"
 
-gem "aws-sdk-s3", "~> 1.173"
+gem "aws-sdk-s3", "~> 1.176"
 
 gem "better_content_security_policy", "~> 0.1.4"
 
 gem "devise_zxcvbn", "~> 6.0"
 
 gem "ransack", "~> 4.2"
-gem "federails", "~> 0.3"
+gem "federails", "~> 0.4"
+gem "federails-moderation", "~> 0.2"
 gem "caber"
 
 gem "nanoid", "~> 2.0"
@@ -167,4 +168,6 @@ group :development, :production do
 end
 
 gem "pghero", "~> 3.6"
-gem "pg_query", "~> 5.1"
+gem "pg_query", "~> 6.0"
+
+gem "get_process_mem", "~> 1.0"

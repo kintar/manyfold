@@ -2,7 +2,7 @@
   <%= tag.meta property: "og:type", content: "website" %>
   <%= tag.meta property: "og:image", content: model_model_file_url(@model, @model.preview_file, format: @model.preview_file.extension) if @model.preview_file&.is_image? && !@model.sensitive %>
   <%= tag.meta name: "description", content: truncate(sanitize(@model.notes), length: 80) if @model.notes.present? %>
-  <%= tag.meta name: "fediverse:creator", content: "@#{@model.creator.actor.at_address}" if @model.creator %>
+  <%= tag.meta name: "fediverse:creator", content: "@#{@model.creator.federails_actor.at_address}" if @model.creator %>
 <% end %>
 
 <% content_for :page_header do %>
@@ -111,6 +111,10 @@
       </ul>
     </div>
   </div>
+
+  <%= card :secondary, t("layouts.card_list_page.actions_heading") do %>
+    <%= link_to safe_join([icon("flag", t("general.report", type: Model.model_name.human)), t("general.report", type: Model.model_name.human)], " "), new_model_report_path(@model), class: "btn btn-outline-warning" %>
+  <% end if SiteSettings.multiuser_enabled? %>
 
   <% if !@model.parents.empty? && policy(@model).merge? %>
     <%= card :danger, t(".merge.heading") do %>
