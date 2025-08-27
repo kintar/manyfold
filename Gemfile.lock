@@ -16,8 +16,8 @@ GIT
 
 GIT
   remote: https://github.com/manyfold3d/fasp_client.git
-  revision: 9bb971993f55e240c89af80af8f57aa5110884cc
-  ref: v0.3.0
+  revision: 89af05fa4a0e25299612dc1e447e7103c33a22c9
+  ref: v0.3.1
   specs:
     fasp_client (0.1.0)
       ed25519 (~> 1.4)
@@ -637,7 +637,7 @@ GEM
     rails-settings-cached (2.9.6)
       activerecord (>= 5.0.0)
       railties (>= 5.0.0)
-    rails_performance (1.4.2)
+    rails_performance (1.4.3)
       browser
       railties
       redis
@@ -766,7 +766,7 @@ GEM
     rubyzip (2.4.1)
     scoped_search (4.2.0)
       activerecord (>= 4.2.0)
-    scout_apm (5.7.0)
+    scout_apm (5.7.1)
       parser
     securerandom (0.4.1)
     selenium-webdriver (4.35.0)
